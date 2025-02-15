@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bear with Heart</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+</head>
+<body>
+    <div id="petal-container"></div>
+
+    <audio id="myAudio" src="images/Carefree.mp3"></audio>
+
+    <script>
+        function playAudio() {
+            const audio = document.getElementById("myAudio");
+            audio.play();
+            document.removeEventListener("click", playAudio); // Remove event after first click
+        }
+    
+        document.addEventListener("click", playAudio);
+    </script>
+
+
+       <h1>Happy valentine's day poopyy</h1>
+
+
+    <div class="bear-container">
+        <div class="bear">
+            <div class="ears"></div>
+            <div class="face">
+                <div class="eyes"></div>
+                <div class="nose"></div>
+                <div class="mouth"></div>
+                <div class="mouth2"></div>
+            </div>
+            <div class="body"></div>
+            <div class="left-leg"></div>
+            <div class="right-leg"></div>
+            <div class="arms"></div>
+            <div class="heart">
+                <div class="content">
+                    <img id="display-image" src="images/davidbed.png" alt="David in bed">
+                    <p id="caption">Hiii poopy love you</p>
+                    <div class="arrows">
+                        <button id="prev">&larr;</button>
+                        <button id="next">&rarr;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+
+</body>
+</html>

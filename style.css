@@ -1,0 +1,290 @@
+
+.textcontainer h1{
+    background-color: yellow;
+}
+
+body {
+    background-color: #f4d6d6;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Remove the height:50vh constraint */
+    min-height: 100vh; /* This ensures minimum full viewport height */
+    padding: 50px 0; /* Add padding top and bottom */
+    gap: 20px;
+}
+
+#petal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.petal {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background-image: url("https://image.ibb.co/kyUHab/rose.png");
+    background-size: cover;
+    opacity: 0.8;
+}
+
+.dot {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    background: url(https://image.ibb.co/kyUHab/rose.png);
+    background-size: 100% 100%;
+    opacity: 0.8;
+}
+
+#container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.bear-container {
+    position: relative;
+  
+}
+
+h1 {
+    font-family: 'Arial', sans-serif;
+    color: #FF1493;
+    text-align: center;
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 0;
+}
+
+
+#caption {
+    font-family:cursive;
+    font-size: 1.5rem;
+}
+
+.bear {
+    position: relative;
+    width: 200px;
+    height: 400px;
+}
+
+.ears {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    background: #8b5a2b;
+    border-radius: 50%;
+    top: -10px;
+    left: -10px;
+    box-shadow: 120px 0 #8b5a2b;
+}
+
+.face {
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    background: #8b5a2b;
+    border-radius: 50%;
+    top: 0px;
+    left: 0px;
+}
+
+.eyes {
+    position: absolute;
+    top: 70px;
+    left: 35px;
+    width: 20px;
+    height: 20px;
+    background: black;
+    border-radius: 100%;
+    box-shadow: 100px 0 black;
+}
+
+.nose {
+    position: absolute;
+    top: 100px;
+    left: 83px;
+    width: 0;
+    height: 0;
+    /* Create triangle using borders */
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 15px solid black;
+    /* Remove the previous background and border-radius */
+    background: none;
+    transform: rotate(180deg); /* Flip the triangle to point down */
+}
+
+.mouth {
+    position: absolute;
+    top: 105px;
+    left: 70px;
+    width: 20px;
+    height: 10px;
+    border: 3px solid black;
+    border-top: none;
+    border-radius: 0 0 40px 40px;
+}
+
+.mouth2 {
+    position: absolute;
+    top: 105px;
+    left: 90px;
+    width: 20px;
+    height: 10px;
+    border: 3px solid black;
+    border-top: none;
+    border-radius: 0 0 40px 40px;
+}
+
+.arms {
+    position: absolute;
+    width: 100px;
+    height: 70px;
+    background: #8b5a2b;
+    border-radius: 50px;
+    top: 100px;
+    left: -200px;
+    box-shadow: 480px 0 #8b5a2b;
+    z-index: 2;
+}
+
+.heart {
+    position: absolute;
+    width: 400px;
+    height: 305px;
+    top: 100px;
+    left: -260px;
+    z-index: 1;
+}
+
+.heart::before, 
+.heart::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 350px;
+    height: 550px;
+    border-radius: 1005px 1000px 0 0;
+    background: rgb(179, 15, 15);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+;
+}
+
+.heart::before {
+    left: 350px;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+
+.heart::after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+    margin-left: 105px;
+    width: 500px; /* Adjusting width */
+    height: auto; /* Adjusting height */
+}
+
+.content img {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.content p {
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    margin: 10px 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.arrows {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+button {
+    background: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #f0f0f0;
+}
+
+.body {
+    position: absolute;
+    width: 600px;
+    height: 500px;
+    background: #8b5a2b;
+    border-radius: 50% / 60% 60% 40% 40%; /* Makes it more oval-shaped */
+    top: 190px;
+    left: -200px;
+    z-index: 0;
+}
+
+.legs {
+    position: absolute;
+    width: 90px;
+    height: 120px;
+    background: #732b8b;
+    border-radius: 100px;
+    top: 620px;
+    left: -180px;
+    box-shadow: 450px 0 #8b5a2b; /* Creates second leg */
+}
+
+.left-leg {
+    position: absolute;
+    width: 140px;
+    height: 200px;
+    background: #7e5126;
+    border-radius: 100px;
+    top: 500px;
+    left: -240px;
+    transform: rotate(-30deg); /* Rotate left leg outward */
+}
+
+.right-leg {
+    position: absolute;
+    width: 140px;
+    height: 200px;
+    background: #7e5126;
+    border-radius: 100px;
+    top: 500px;
+    left: 300px;
+    transform: rotate(30deg); /* Rotate right leg outward */
+}
